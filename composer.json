@@ -1,5 +1,5 @@
 {
-    "name": "alexwenzel/faq-plugin",
+    "name": "alexwenzel/october-faqs-plugin",
     "type": "october-plugin",
     "description": "Fork of FAQs plugin.",
     "require": {
