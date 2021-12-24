@@ -1,7 +1,21 @@
 {
     "name": "alexwenzel/octoberfaqs-plugin",
     "description": "Fork of FAQs plugin.",
+    "homepage": "https://github.com/alexwenzel/octoberfaqs",
+    "type": "october-plugin",
     "version": "1.1.1",
+    "authors": [
+        {
+            "name": "alexwenzel",
+            "email": "alexander.wenzel.berlin@gmail.com",
+            "homepage": "https://github.com/alexwenzel"
+        },
+        {
+            "name": "piersroberts",
+            "email": "piersroberts@gmail.com",
+            "homepage": "https://github.com/piersroberts"
+        }
+    ],
     "require": {
         "composer/installers": "~1.0"
     },
