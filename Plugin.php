@@ -1,6 +1,6 @@
 <?php
 
-namespace BuzzwordCompliant\FAQs;
+namespace Alexwenzel\OctoberFaqs;
 
 use Backend;
 use System\Classes\PluginBase;
@@ -11,7 +11,7 @@ class Plugin extends PluginBase
     {
         return [
             'name' => 'FAQs',
-            'author' => 'piersroberts@gmail.com',
+            'author' => 'alexander.wenzel.berlin@gmail.com',
             'icon' => 'icon-question',
             'homepage' => 'https://github.com/piersroberts/october-faqs',
         ];
@@ -22,9 +22,9 @@ class Plugin extends PluginBase
         return [
             'faqs' => [
                 'label' => 'FAQs',
-                'url' => Backend::url('buzzwordcompliant/faqs/faqs'),
-                'iconSvg' => '/plugins/buzzwordcompliant/faqs/assets/icon.svg',
-                'permissions' => ['buzzwordcompliant.faqs.*'],
+                'url' => Backend::url('alexwenzel/octoberfaqs/faqs'),
+                'iconSvg' => '/plugins/alexwenzel/octoberfaqs/assets/icon.svg',
+                'permissions' => ['alexwenzel.octoberfaqs.*'],
             ],
         ];
     }
@@ -32,8 +32,8 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'BuzzwordCompliant\FAQs\Components\FAQ' => 'faq',
-            'BuzzwordCompliant\FAQs\Components\FAQList' => 'faqlist',
+            'Alexwenzel\OctoberFaqs\Components\FAQ' => 'faq',
+            'Alexwenzel\OctoberFaqs\Components\FAQList' => 'faqlist',
         ];
     }
 }

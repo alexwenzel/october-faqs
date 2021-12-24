@@ -1,8 +1,8 @@
 <?php
-namespace BuzzwordCompliant\FAQs\Components;
+namespace Alexwenzel\OctoberFaqs\Components;
 
 use Cms\Classes\ComponentBase;
-use BuzzwordCompliant\FAQs\Models\FAQ as FAQModel;
+use Alexwenzel\OctoberFaqs\Models\FAQ as FAQModel;
 
 class FAQList extends ComponentBase
 {

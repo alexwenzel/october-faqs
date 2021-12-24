@@ -1,9 +1,9 @@
 <?php
 
-namespace BuzzwordCompliant\FAQs\Components;
+namespace Alexwenzel\OctoberFaqs\Components;
 
 use Illuminate\Support\Facades\Log;
-use BuzzwordCompliant\FAQs\Models\FAQ as FAQModel;
+use Alexwenzel\OctoberFaqs\Models\FAQ as FAQModel;
 use Cms\Classes\ComponentBase;
 
 class FAQ extends ComponentBase

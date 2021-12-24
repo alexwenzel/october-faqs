@@ -9,7 +9,7 @@ title: Reorder Questions
 nameFrom: question
 
 # Model Class name
-modelClass: BuzzwordCompliant\FAQs\Models\Question
+modelClass: Alexwenzel\OctoberFaqs\Models\Question
 
 # Toolbar widget configuration
 toolbar:

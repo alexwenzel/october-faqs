@@ -1,6 +1,6 @@
 <?php
 
-namespace BuzzwordCompliant\FAQs\Controllers;
+namespace Alexwenzel\OctoberFaqs\Controllers;
 
 use Backend\Classes\Controller;
 use Backend\Facades\BackendMenu;

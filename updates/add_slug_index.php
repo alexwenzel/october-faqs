@@ -1,11 +1,11 @@
 <?php
 
-namespace BuzzwordCompliant\FAQs\Updates;
+namespace Alexwenzel\OctoberFaqs\Updates;
 
 use Schema;
 Use Str;
 use October\Rain\Database\Updates\Migration;
-use BuzzwordCompliant\FAQs\Models\FAQ;
+use Alexwenzel\OctoberFaqs\Models\FAQ;
 
 class AddSlugIndex extends Migration
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace BuzzwordCompliant\FAQs\Updates;
+namespace Alexwenzel\OctoberFaqs\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;

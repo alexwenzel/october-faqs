@@ -1,6 +1,6 @@
 title: FAQs
-list: $/buzzwordcompliant/faqs/models/faq/columns.yaml
-modelClass: BuzzwordCompliant\FAQs\Models\FAQ
-recordUrl: buzzwordcompliant/faqs/faqs/update/:id
+list: $/alexwenzel/octoberfaqs/models/faq/columns.yaml
+modelClass: Alexwenzel\OctoberFaqs\Models\FAQ
+recordUrl: alexwenzel/octoberfaqs/faqs/update/:id
 toolbar:
     buttons: list_toolbar

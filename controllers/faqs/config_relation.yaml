@@ -1,9 +1,9 @@
 questions:
     label: Question
     manage:
-        form: $/buzzwordcompliant/faqs/models/question/fields.yaml
+        form: $/alexwenzel/octoberfaqs/models/question/fields.yaml
     view:
-        list: $/buzzwordcompliant/faqs/models/question/columns.yaml
+        list: $/alexwenzel/octoberfaqs/models/question/columns.yaml
         toolbarButtons: create|delete
         showSorting: false
         defaultSort:

@@ -1,6 +1,6 @@
 <?php
 
-namespace BuzzwordCompliant\FAQs\Models;
+namespace Alexwenzel\OctoberFaqs\Models;
 
 use October\Rain\Database\Model;
 use October\Rain\Database\Traits\Sortable;

@@ -1,10 +1,9 @@
 <?php
 
-namespace BuzzwordCompliant\FAQs\Models;
+namespace Alexwenzel\OctoberFaqs\Models;
 
 use October\Rain\Database\Model;
 use October\Rain\Database\Traits\Sluggable;
-use Str;
 
 class FAQ extends Model
 {
@@ -13,12 +12,12 @@ class FAQ extends Model
     public $table = 'bc_faqs';
     public $hasMany = [
         'questions' => [
-            'BuzzwordCompliant\FAQs\Models\Question',
+            'Alexwenzel\OctoberFaqs\Models\Question',
             'key' => 'faq_id',
             'order' => 'sort_order',
         ],
         'questions_count' => [
-            'BuzzwordCompliant\FAQs\Models\Question',
+            'Alexwenzel\OctoberFaqs\Models\Question',
             'key' => 'faq_id',
             'count' => true,
         ],

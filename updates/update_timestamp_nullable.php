@@ -1,4 +1,4 @@
-<?php namespace BuzzwordCompliant\FAQs\Updates;
+<?php namespace Alexwenzel\OctoberFaqs\Updates;
 
 use October\Rain\Database\Updates\Migration;
 use DbDongle;
