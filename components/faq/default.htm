@@ -1,18 +1,22 @@
-<strong>{{ __SELF__.title }}</strong>
+<div class="octoberfaq">
+    <strong class="octoberfaq--title">{{ __SELF__.title }}</strong>
 
-<dl class="octoberfaq">
-    {% for item in __SELF__.questions %}
-        <dt class="octoberfaq-question">{{ item.question|raw }}</dt>
-        <dd class="octoberfaq-answer">{{ item.answer|raw }}</dd>
-    {% endfor %}
-</dl>
+    <dl class="octoberfaq--dl">
+        {% for item in __SELF__.questions %}
+        <dt class="octoberfaq--question">{{ item.question|raw }}</dt>
+        <dd>
+            <div class="octoberfaq--details">{{ item.details|raw }}</div>
+            <div class="octoberfaq--answer">{{ item.answer|raw }}</div>
+        </dd>
+        {% endfor %}
+    </dl>
 
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "FAQPage",
-    "name": "{{ __SELF__.title }}",
-    "mainEntity": {{ __SELF__.schemaFAQPage|json_encode|raw }}
-}
-</script>
-
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "FAQPage",
+            "name": "{{ __SELF__.title }}",
+            "mainEntity": {{ __SELF__.schemaFAQPage|json_encode|raw }}
+        }
+    </script>
+</div>
