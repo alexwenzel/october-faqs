@@ -1,0 +1,8 @@
+{
+    "name": "alexwenzel/faq-plugin",
+    "type": "october-plugin",
+    "description": "Fork of FAQs plugin.",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
