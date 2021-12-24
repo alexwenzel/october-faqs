@@ -13,7 +13,7 @@ class FAQ extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name' => 'FAQ Questions',
+            'name'        => 'FAQ Questions',
             'description' => 'Fetch a list of questions from a specific FAQ',
         ];
     }
@@ -22,16 +22,16 @@ class FAQ extends ComponentBase
     {
         return [
             'slug' => [
-                'title' => 'FAQ Name',
+                'title'       => 'FAQ Name',
                 'description' => 'The name of the FAQ',
-                'type' => 'dropdown',
+                'type'        => 'dropdown',
                 'placeholder' => 'Please choose a FAQ',
-                'required' => true,
+                'required'    => true,
             ],
-            'id' => [
-                'title' => 'FAQ Id [deprecated]',
-                'description' => 'Use to overide the selected FAQ',
-                'type' => 'string',
+            'id'   => [
+                'title'             => 'FAQ Id [deprecated]',
+                'description'       => 'Use to overide the selected FAQ',
+                'type'              => 'string',
                 'validationPattern' => '^[0-9]+$',
                 'validationMessage' => 'The Id must be a number',
             ],
@@ -43,7 +43,7 @@ class FAQ extends ComponentBase
         $faqs = FAQModel::all();
         $options = [];
         foreach ($faqs as $faq) {
-            $options[$faq->slug] = $faq->name ? $faq->name : $faq->slug;
+            $options[$faq->slug] = $faq->slug;
         }
         return $options;
     }
@@ -67,13 +67,31 @@ class FAQ extends ComponentBase
         }
     }
 
+    public function title()
+    {
+        return isset($this->faq->name) ? $this->faq->name : '';
+    }
+
     public function questions()
     {
         return isset($this->faq->questions) ? $this->faq->questions : [];
     }
 
-    public function title()
+    public function schemaFAQPage()
     {
-        return isset($this->faq->name) ? $this->faq->name : '';
+        $result = [];
+        foreach ($this->questions() as $item) {
+            $result[] = [
+                "@type"          => "Question",
+                "name"           => strip_tags($item->question),
+                "answerCount"    => 1,
+                "acceptedAnswer" => [
+                    "@type" => "Answer",
+                    "text"  => strip_tags($item->answer)
+                ]
+            ];
+        }
+
+        return $result;
     }
 }

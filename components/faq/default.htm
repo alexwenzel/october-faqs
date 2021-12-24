@@ -1,0 +1,18 @@
+<strong>{{ __SELF__.title }}</strong>
+
+<dl class="octoberfaq">
+    {% for item in __SELF__.questions %}
+        <dt class="octoberfaq-question">{{ item.question|raw }}</dt>
+        <dd class="octoberfaq-answer">{{ item.answer|raw }}</dd>
+    {% endfor %}
+</dl>
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "FAQPage",
+    "name": "{{ __SELF__.title }}",
+    "mainEntity": {{ __SELF__.schemaFAQPage|json_encode|raw }}
+}
+</script>
+

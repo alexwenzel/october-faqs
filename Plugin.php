@@ -10,9 +10,9 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'FAQs',
-            'author' => 'alexander.wenzel.berlin@gmail.com',
-            'icon' => 'icon-question',
+            'name'     => 'FAQs',
+            'author'   => 'alexander.wenzel.berlin@gmail.com',
+            'icon'     => 'icon-question',
             'homepage' => 'https://github.com/piersroberts/october-faqs',
         ];
     }
@@ -21,9 +21,9 @@ class Plugin extends PluginBase
     {
         return [
             'faqs' => [
-                'label' => 'FAQs',
-                'url' => Backend::url('alexwenzel/octoberfaqs/faqs'),
-                'iconSvg' => '/plugins/alexwenzel/octoberfaqs/assets/icon.svg',
+                'label'       => 'FAQs',
+                'url'         => Backend::url('alexwenzel/octoberfaqs/faqs'),
+                'iconSvg'     => '/plugins/alexwenzel/octoberfaqs/assets/icon.svg',
                 'permissions' => ['alexwenzel.octoberfaqs.*'],
             ],
         ];
@@ -32,7 +32,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Alexwenzel\OctoberFaqs\Components\FAQ' => 'faq',
+            'Alexwenzel\OctoberFaqs\Components\FAQ'     => 'faq',
             'Alexwenzel\OctoberFaqs\Components\FAQList' => 'faqlist',
         ];
     }

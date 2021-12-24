@@ -13,6 +13,7 @@ class CreateInitialTables extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name')->unique();
+            $table->string('slug')->unique()->nullable();
             $table->timestamps();
         });
 
@@ -22,6 +23,7 @@ class CreateInitialTables extends Migration
             $table->integer('faq_id')->unsigned()->nullable();
             $table->foreign('faq_id')->references('id')->on('bc_faqs');
             $table->text('question')->nullable();
+            $table->text('details')->nullable();
             $table->text('answer')->nullable();
             $table->integer('sort_order')->nullable();
             $table->timestamps();

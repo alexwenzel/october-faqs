@@ -11,14 +11,14 @@ class FAQ extends Model
 
     public $table = 'bc_faqs';
     public $hasMany = [
-        'questions' => [
+        'questions'       => [
             'Alexwenzel\OctoberFaqs\Models\Question',
-            'key' => 'faq_id',
+            'key'   => 'faq_id',
             'order' => 'sort_order',
         ],
         'questions_count' => [
             'Alexwenzel\OctoberFaqs\Models\Question',
-            'key' => 'faq_id',
+            'key'   => 'faq_id',
             'count' => true,
         ],
     ];
