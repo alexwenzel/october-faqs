@@ -51,19 +51,11 @@ class FAQ extends ComponentBase
     public function onRun()
     {
         if ($this->property('id')) {
-            Log::notice(
-                'FAQ: Fetching a FAQ by Id is deprecated, please switch to using the dropdown in ' .
-                $this->getPage()->fileName
-            );
             $identifier = $this->property('id');
             $this->faq = FAQModel::with('questions')->find($identifier);
         } else {
             $identifier = $this->property('slug');
             $this->faq = FAQModel::with('questions')->where('slug', $identifier)->first();
-        }
-
-        if (!$this->faq) {
-            Log::notice('FAQ: "' . $identifier . '" not found in ' . $this->getPage()->fileName);
         }
     }
 
