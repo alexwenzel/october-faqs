@@ -3,7 +3,7 @@
     "description": "Fork of FAQs plugin.",
     "homepage": "https://github.com/alexwenzel/octoberfaqs",
     "type": "october-plugin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "authors": [
         {
             "name": "alexwenzel",
