@@ -2,14 +2,22 @@
 
 namespace Alexwenzel\OctoberFaqs\Models;
 
+use Eloquent;
 use October\Rain\Database\Model;
 use October\Rain\Database\Traits\Sluggable;
 
+/**
+ * @mixin Eloquent
+ */
 class FAQ extends Model
 {
     use Sluggable;
 
     public $table = 'bc_faqs';
+
+    /**
+     * @var array
+     */
     public $hasMany = [
         'questions'       => [
             'Alexwenzel\OctoberFaqs\Models\Question',
@@ -23,5 +31,22 @@ class FAQ extends Model
         ],
     ];
 
-    protected $slugs = ['slug' => 'name'];
+    /**
+     * @var string[]
+     */
+    protected array $slugs = ['slug' => 'name'];
+
+    /**
+     * @var string[]
+     */
+    public $implement = [
+        'RainLab.Translate.Behaviors.TranslatableModel',
+    ];
+
+    /**
+     * @var array
+     */
+    public array $translatable = [
+        "name",
+    ];
 }
